@@ -26,6 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body onload="Rendering();">
 <%
+	request.setCharacterEncoding("utf-8");
    textbookService service=new textbookService();
    List<textbook>books=service.getAll();
    request.setAttribute("books", books);
@@ -55,7 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <article class="mainContent">
                     <header class="contentNav">
                         <nav class="nav">
-                            <a href="index.html">首页</a>·
+                            <a href="index.jsp">首页</a>·
                             <a href="courseDetail-1.jsp">课程概况</a>·
                             <a href="courseDetail-3.jsp">教材与参考资料</a>
                         </nav>
@@ -97,15 +98,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </article>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="${pageContext.request.contextPath }/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="${pageContext.request.contextPath }/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" src="${pageContext.request.contextPath }/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="${pageContext.request.contextPath }/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="${pageContext.request.contextPath }/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="${pageContext.request.contextPath }/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 $('.table-sort').dataTable({
 	"aaSorting": [[ 0, "desc" ]],//默认第几个排序

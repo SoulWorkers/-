@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/normal.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/normal.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/courseDetail.css">
-    <script type="text/javascript" src="js/normal.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/normal.js"></script>
 </head>
 
 <body onload="Rendering();">
@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <article class="content">
 
         <section id="banner">
-            <img src="../images/index/abouttop_03.jpg">
+            <img src="${pageContext.request.contextPath }/images/index/abouttop_03.jpg">
         </section>
         <section class="mainWrap relative">
             <div class="detailContent">
@@ -46,7 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <article class="mainContent">
                         <header class="contentNav">
                             <nav class="nav">
-                                <a href="index.html">首页</a>·
+                                <a href="index.jsp">首页</a>·
                                 <a href="courseDetail-1.jsp">课程概况</a>·
                                 <a href="courseDetail-1.jsp">课程简介</a>
                             </nav>
@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </article>
                     <br>
                     <br>
-                    <a href="../resource/面向对象分析与设计--课程简介.pdf">点击这里下载课程简介.pdf文件</a>
+                    <a href="${pageContext.request.contextPath }//resource/面向对象分析与设计--课程简介.pdf">点击这里下载课程简介.pdf文件</a>
                 </div>
                 <div class="column_3">
                     <figure class="present">
