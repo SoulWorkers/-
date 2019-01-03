@@ -97,26 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </section>
 </article>
 
-<!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
-<!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/lib/laypage/1.2/laypage.js"></script>
-<script type="text/javascript">
-$('.table-sort').dataTable({
-	"aaSorting": [[ 0, "desc" ]],//默认第几个排序
-	"bStateSave": true,//状态保存
-	"pading":false,
-	"aoColumnDefs": [
-	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[,1,2,3,4,5,6,7]}// 不参与排序的列
-	]
-});
 </script>
 <!-- 通过js渲染，js代码在normal.js里 -->
 <div id="bottom"></div>
