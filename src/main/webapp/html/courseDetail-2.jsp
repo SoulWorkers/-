@@ -1,15 +1,15 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,java.io.*,org.apache.poi.xwpf.usermodel.*,org.apache.poi.*,org.apache.poi.xwpf.extractor.XWPFWordExtractor" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="java.io.*,org.apache.poi.xwpf.usermodel.*,org.apache.poi.*,org.apache.poi.xwpf.extractor.XWPFWordExtractor"%>
-<html>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%><html>
+<%@ page isELIgnored="false" %>
 <head>
 <title>课程概况-课程简介</title>
 <meta charset="utf-8">
-<link rel="icon" href="${pageContext.request.contextPath }//images/dgut.jpg">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }//style/normal.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }//style/courseDetail/normal.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }//style/courseDetail/courseDetail.css">
-<script type="text/javascript" src="${pageContext.request.contextPath }//js/normal.js"></script>
+<link rel="icon" href="${pageContext.request.contextPath }/images/dgut.jpg">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/normal.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/normal.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/courseDetail.css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/normal.js"></script>
 
 </head>
 <body onload="Rendering();">
@@ -27,7 +27,7 @@
 	<article class="content">
 
 		<section id="banner">
-			<img src="/opencourses/images/index/abouttop_03.jpg">
+			<img src="${pageContext.request.contextPath }/images/index/abouttop_03.jpg">
 		</section>
 		<section class="mainWrap relative">
 			<div class="detailContent">
@@ -67,7 +67,9 @@
 								<p><%=strs[i]%></p>
 								<%
 									}
+									ex.close();
 								%>
+								
 								<p> </p>
 							</div>
 						</div>

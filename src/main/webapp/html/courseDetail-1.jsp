@@ -13,10 +13,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <title>课程概况-课程简介</title>
     <meta charset="utf-8">
-    <link rel="icon" href="images/dgut.jpg">
-    <link rel="stylesheet" type="text/css" href="style/normal.css">
-    <link rel="stylesheet" type="text/css" href="style/courseDetail/normal.css">
-    <link rel="stylesheet" type="text/css" href="style/courseDetail/courseDetail.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/images/dgut.jpg">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/normal.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/normal.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/courseDetail/courseDetail.css">
     <script type="text/javascript" src="js/normal.js"></script>
 </head>
 
